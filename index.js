@@ -1,7 +1,8 @@
 'use strict';
 
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {View, Text, TouchableHighlight, Image, TouchableOpacity, ScrollView, Animated, Easing} from 'react-native';
+import PropTypes from 'prop-types';
 
  class DropdownMenu extends Component {
 
@@ -166,7 +167,7 @@ import {View, Text, TouchableHighlight, Image, TouchableOpacity, ScrollView, Ani
 
     return (
       <View style={{flexDirection: 'column', flex: 1}} >
-        <View style={[{flexDirection: 'row', backgroundColor: this.props.bgColor ? this.props.bgColor : this.defaultConfig.bgColor}, this.props.style]} >
+        <View style={[{flexDirection: 'row', backgroundColor: this.props.bgColor ? this.props.bgColor : this.defaultConfig.bgColor}, this.props.containerStyle]} >
 
           {
             this.props.data.map((rows, index) =>
@@ -204,6 +205,7 @@ import {View, Text, TouchableHighlight, Image, TouchableOpacity, ScrollView, Ani
 
 
 DropdownMenu.propTypes = {
+  containerStyle: PropTypes.object,
   bgColor: PropTypes.string,
   tintColor:PropTypes.string,
   selectItemColor:PropTypes.string,
