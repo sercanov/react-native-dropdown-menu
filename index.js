@@ -35,7 +35,7 @@ import {View, Text, TouchableHighlight, Image, TouchableOpacity, ScrollView, Ani
       return (
         <View style={{flex: 1, justifyContent: 'space-between', alignItems: "center", paddingHorizontal: 15, flexDirection: 'row'}} >
           <Text style={{color: this.props.selectItemColor ? this.props.selectItemColor : this.defaultConfig.selectItemColor}} >{title}</Text>
-          <Image source={checkImage} />
+          <Image style={{ tintColor: this.props.tintColor }} source={checkImage} />
         </View>
       );
     } else {
@@ -166,7 +166,7 @@ import {View, Text, TouchableHighlight, Image, TouchableOpacity, ScrollView, Ani
 
     return (
       <View style={{flexDirection: 'column', flex: 1}} >
-        <View style={{flexDirection: 'row', backgroundColor: this.props.bgColor ? this.props.bgColor : this.defaultConfig.bgColor}} >
+        <View style={[{flexDirection: 'row', backgroundColor: this.props.bgColor ? this.props.bgColor : this.defaultConfig.bgColor}, this.props.style]} >
 
           {
             this.props.data.map((rows, index) =>
