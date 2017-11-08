@@ -36,7 +36,7 @@ import PropTypes from 'prop-types';
       return (
         <View style={{flex: 1, justifyContent: 'space-between', alignItems: "center", paddingHorizontal: 15, flexDirection: 'row'}} >
           <Text style={{color: this.props.selectItemColor ? this.props.selectItemColor : this.defaultConfig.selectItemColor}} >{title}</Text>
-          <Image style={{ tintColor: this.props.tintColor }} source={checkImage} />
+          <Image style={{ tintColor: this.props.selectItemColor }} source={checkImage} />
         </View>
       );
     } else {
